@@ -129,6 +129,7 @@ def main():
     plt.savefig('output.png')
     plt.close()
 
+    print(eigenvector.shape)
     eig_to_show_row = 3
     eig_to_show_col = 4
     fig, ax = plt.subplots(eig_to_show_row,eig_to_show_col)
