@@ -238,7 +238,7 @@ def compute_instance_segmentation(feat, cluster_list,
 
     num_pixels = feat_h * feat_w
     score_list = []
-    mini_batch = 25#30
+    mini_batch = 30
     for idx in range((regions.shape[-1] + mini_batch - 1) // mini_batch):
         score = compute_binary_silhouette_score(feat, regions[...,mini_batch * idx: mini_batch * (idx + 1)], h, w)
         score_list.append(score)
